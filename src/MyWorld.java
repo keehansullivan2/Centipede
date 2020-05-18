@@ -95,7 +95,6 @@ public class MyWorld extends World
                 list = getObjectsAt(mushw/2+xcoord*mushw,mushw/2+ycoord*mushH, null);
             }
             addObject(mush, xcoord*mushw, ycoord*mushH);
-            System.out.println(w);
         }
 
     }

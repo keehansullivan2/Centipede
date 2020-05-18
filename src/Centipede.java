@@ -73,14 +73,15 @@ public class Centipede extends Actor {
                 setImage(img);
                 scale((int) img.getWidth(),(int) img.getHeight());
 
-            } else if (getOneObjectAtOffset(getWidth(), 0, Mushroom.class)!=null && Math.abs(getRotation() % (2*Math.PI) )< .1){
+            } else if (getOneObjectAtOffset(getWidth()/2, 0, Mushroom.class)!=null && Math.abs(getRotation() % (2*Math.PI) )< .1){
+                System.out.println(getWidth()/2 +  "   " + getX() + "   " + getOneObjectAtOffset(getWidth()/2, 0, Mushroom.class).getX());
                 Image img = new Image("file:images/Arcade - Centipede - General Sprites_0000.png");
                 setImage(img);
                 scale((int) img.getWidth(),(int) img.getHeight());
                 setLocation((int) getX(), (int) getY() + getHeight());
                 setRotate(Math.PI);
 
-            }else if (getOneObjectAtOffset(0, 0, Mushroom.class)!=null &&Math.abs((getRotation() % (2*Math.PI)) - Math.PI) < .1){
+            }else if (getOneObjectAtOffset(-getWidth()/2, 0, Mushroom.class)!=null &&Math.abs((getRotation() % (2*Math.PI)) - Math.PI) < .1){
                 setLocation((int) getX(), (int) getY() + getHeight());
                 setRotate(0);
 

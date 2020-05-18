@@ -67,8 +67,9 @@ public class Actor extends ImageView {
         } else {
             ArrayList<Actor> actors = new ArrayList<Actor>(getWorld().getActors());
             for (Actor a: actors) {
-                if (a.getClass() == c) {
+                if (a.getClass().equals(c)) {
                     if (a.contains(getX() + dx, getY() + dy)){
+
                         return a;
                     }
                 }
